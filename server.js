@@ -17,8 +17,14 @@ const biografiasRoutes = require('./routes/biografias.js')
 const app = express()
 const PORT = process.env.PORT
 
+const origins = [
+  'http://localhost:4200',
+  'https://gemafront.netlify.app',
+  'https://portalgema.netlify.app',
+];
+
 app.use(cors({
-    origin: 'http://localhost:4200',
+    origin: origins,
     credentials: true
 }))
 

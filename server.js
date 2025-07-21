@@ -30,6 +30,9 @@ app.use(session({ secret: 'gremistas123', resave: false, saveUninitialized: fals
 app.use(passport.initialize())
 app.use(passport.session())
 
+app.use('/', (req, res)=>{
+    res.send('Servidor no ar!')
+})
 app.use('/auth', authRoutes)
 app.use('/gremistas', gremistasRoutes)
 app.use('/noticias', noticiasRoutes)

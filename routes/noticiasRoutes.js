@@ -14,9 +14,6 @@ router.get('/', async (req, res) => {
     }
 })
 
-router.get('/', (req, res)=>{
-    res.send('Servidor no ar!');
-})
 
 router.post('/', ensureAuthenticated, upload.single('imagem'), async (req, res) => {
     const { titulo, conteudo, template, autor } = req.body
